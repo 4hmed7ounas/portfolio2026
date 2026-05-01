@@ -4,7 +4,7 @@ import { Briefcase, GraduationCap } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 import SkillBadge from "@/components/SkillBadge";
-import { siteConfig, skills, experience, education } from "@/data";
+import { siteConfig, skills, experience, education, certifications, awards } from "@/data";
 
 export const metadata: Metadata = {
   title: "About",
@@ -42,24 +42,17 @@ export default function AboutPage() {
             </h1>
             <div className="mt-5 space-y-4 text-foreground-muted leading-relaxed">
               <p>
-                I&apos;m a full-stack software developer based in{" "}
+                I&apos;m a passionate developer and problem solver based in{" "}
                 <span className="text-foreground font-medium">
                   {siteConfig.location}
                 </span>{" "}
-                with a passion for building web applications that are both{" "}
-                <em>beautiful</em> and <em>functional</em>.
+                with a strong focus on AI, DevOps, and full-stack development.
               </p>
               <p>
-                Over the past 6+ years, I&apos;ve worked with startups and
-                established companies to deliver products that users love. I
-                specialize in the modern JavaScript ecosystem — React, Next.js,
-                Node.js, and TypeScript — but I&apos;m always eager to learn new
-                technologies that help me solve problems more effectively.
+                I love building intelligent, reliable systems — from FastAPI backends integrated with Stripe billing and MongoDB Atlas, to Next.js web apps enhanced with APIs like Spotify and Twilio. My recent work blends machine learning, LLMs, and cloud automation, where I&apos;ve explored areas like speech recognition, voice bots, and AI-powered agents.
               </p>
               <p>
-                When I&apos;m not coding, you&apos;ll find me hiking the Bay
-                Area trails, experimenting with espresso recipes, or contributing
-                to open-source projects.
+                Beyond code, I&apos;m deeply interested in robotics (ROS2), CI/CD pipelines, and building production-ready systems that scale. My goal is to craft products that are not only technically solid but also deliver real impact through intelligent automation and clean design.
               </p>
             </div>
           </AnimatedSection>
@@ -105,7 +98,7 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto space-y-0">
           {experience.map((exp, index) => (
             <AnimatedSection
-              key={exp.company}
+              key={exp.company + exp.role}
               delay={index * 0.1}
               className="relative pl-10 pb-10 last:pb-0"
             >
@@ -138,32 +131,90 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ─── Education Section ─────────────────────────────────────────── */}
+      {/* ─── Education, Certs & Awards ─────────────────────────────────── */}
       <section className="bg-background-alt/50 border-y border-border/50">
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-          <SectionHeading title="Education" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Left Column: Education */}
+            <div>
+              <h2 className="font-serif text-2xl font-bold text-foreground mb-8">
+                Education
+              </h2>
+              <div className="space-y-6">
+                {education.map((edu, index) => (
+                  <AnimatedSection
+                    key={edu.institution}
+                    delay={index * 0.1}
+                    className="flex items-start gap-4 p-6 rounded-xl bg-card-bg border border-border"
+                  >
+                    <div className="w-11 h-11 rounded-lg bg-accent-light flex items-center justify-center shrink-0">
+                      <GraduationCap size={22} className="text-accent" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground">
+                        {edu.degree}
+                      </h3>
+                      <p className="text-sm text-foreground-muted">
+                        {edu.institution}
+                      </p>
+                      <p className="text-xs text-foreground-muted mt-1">
+                        {edu.period}
+                      </p>
+                      {edu.details && (
+                        <p className="text-xs text-foreground-muted mt-2 leading-relaxed">
+                          {edu.details}
+                        </p>
+                      )}
+                    </div>
+                  </AnimatedSection>
+                ))}
+              </div>
+            </div>
 
-          <div className="max-w-3xl mx-auto">
-            {education.map((edu, index) => (
-              <AnimatedSection
-                key={edu.institution}
-                delay={index * 0.1}
-                className="flex items-start gap-4 p-6 rounded-xl bg-card-bg border border-border"
-              >
-                <div className="w-11 h-11 rounded-lg bg-accent-light flex items-center justify-center shrink-0">
-                  <GraduationCap size={22} className="text-accent" />
+            {/* Right Column: Certifications & Awards */}
+            <div className="space-y-12">
+              <div>
+                <h2 className="font-serif text-2xl font-bold text-foreground mb-8">
+                  Certifications
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {certifications.map((cert, index) => (
+                    <AnimatedSection
+                      key={cert.title}
+                      delay={index * 0.05}
+                      className="flex items-center gap-3 p-4 rounded-lg bg-card-bg border border-border"
+                    >
+                      <span className="text-xl">{cert.icon}</span>
+                      <span className="text-sm font-medium text-foreground">
+                        {cert.title}
+                      </span>
+                    </AnimatedSection>
+                  ))}
                 </div>
-                <div>
-                  <h3 className="font-semibold text-foreground">{edu.degree}</h3>
-                  <p className="text-sm text-foreground-muted">
-                    {edu.institution}
-                  </p>
-                  <p className="text-xs text-foreground-muted mt-1">
-                    {edu.period}
-                  </p>
+              </div>
+
+              <div>
+                <h2 className="font-serif text-2xl font-bold text-foreground mb-8">
+                  Honors & Awards
+                </h2>
+                <div className="space-y-4">
+                  {awards.map((award, index) => (
+                    <AnimatedSection
+                      key={award.title}
+                      delay={index * 0.05}
+                      className="flex items-start gap-3 p-4 rounded-lg bg-card-bg border border-border"
+                    >
+                      <div className="w-8 h-8 rounded-full bg-accent-light flex items-center justify-center shrink-0">
+                        <span className="text-xs">🏆</span>
+                      </div>
+                      <span className="text-sm font-medium text-foreground">
+                        {award.title}
+                      </span>
+                    </AnimatedSection>
+                  ))}
                 </div>
-              </AnimatedSection>
-            ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

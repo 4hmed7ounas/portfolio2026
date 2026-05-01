@@ -26,16 +26,13 @@ export default function Home() {
         <div className="relative mx-auto max-w-6xl px-6 py-24 md:py-36 lg:py-44">
           <AnimatedSection className="max-w-3xl">
             <p className="text-sm font-medium text-accent tracking-wide uppercase mb-4">
-              Software Developer
+              {siteConfig.role}
             </p>
             <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight leading-[1.1]">
               {siteConfig.heroTagline}
             </h1>
             <p className="mt-6 text-lg md:text-xl text-foreground-muted leading-relaxed max-w-2xl">
-              Full-stack developer specializing in React, Next.js, and Node.js. I
-              turn complex problems into <em className="text-foreground font-medium not-italic">simple</em>,{" "}
-              <em className="text-foreground font-medium not-italic">beautiful</em>, and{" "}
-              <em className="text-foreground font-medium not-italic">intuitive</em> solutions.
+              {siteConfig.heroDescription}
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button href="/projects" variant="primary">

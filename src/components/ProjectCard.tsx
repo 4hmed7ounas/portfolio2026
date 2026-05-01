@@ -26,7 +26,7 @@ export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
       className="group rounded-xl border border-border bg-card-bg overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-300"
     >
       {/* Project Image */}
-      <div className="relative aspect-[16/9] overflow-hidden bg-background-alt">
+      <div className="relative aspect-video overflow-hidden bg-background-alt">
         <Image
           src={project.image}
           alt={project.title}

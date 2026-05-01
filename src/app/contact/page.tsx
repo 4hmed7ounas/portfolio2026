@@ -36,7 +36,7 @@ export default function ContactPage() {
             </h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-lg bg-accent-light flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div className="w-10 h-10 rounded-lg bg-accent-light flex items-center justify-center shrink-0 mt-0.5">
                   <Mail size={18} className="text-accent" />
                 </div>
                 <div>
@@ -50,7 +50,7 @@ export default function ContactPage() {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-lg bg-accent-light flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div className="w-10 h-10 rounded-lg bg-accent-light flex items-center justify-center shrink-0 mt-0.5">
                   <MapPin size={18} className="text-accent" />
                 </div>
                 <div>
@@ -63,7 +63,7 @@ export default function ContactPage() {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-lg bg-accent-light flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div className="w-10 h-10 rounded-lg bg-accent-light flex items-center justify-center shrink-0 mt-0.5">
                   <Clock size={18} className="text-accent" />
                 </div>
                 <div>
