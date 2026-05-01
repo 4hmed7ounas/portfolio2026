@@ -24,7 +24,7 @@ export interface Skill {
 export interface SocialLink {
   name: string;
   url: string;
-  icon: "Github" | "Linkedin" | "Twitter" | "Mail";
+  icon: "FaGithub" | "FaLinkedin" | "FaTwitter" | "Mail";
 }
 
 // ─── Site Info ────────────────────────────────────────────────────────────────
@@ -43,9 +43,9 @@ export const siteConfig = {
 // ─── Social Links ─────────────────────────────────────────────────────────────
 
 export const socialLinks: SocialLink[] = [
-  { name: "GitHub", url: "https://github.com", icon: "Github" },
-  { name: "LinkedIn", url: "https://linkedin.com", icon: "Linkedin" },
-  { name: "Twitter", url: "https://twitter.com", icon: "Twitter" },
+  { name: "GitHub", url: "https://github.com", icon: "FaGithub" },
+  { name: "LinkedIn", url: "https://linkedin.com", icon: "FaLinkedin" },
+  { name: "Twitter", url: "https://twitter.com", icon: "FaTwitter" },
   { name: "Email", url: "mailto:alex@alexmorgan.dev", icon: "Mail" },
 ];
 
