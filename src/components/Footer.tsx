@@ -13,7 +13,7 @@ const iconMap = {
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-background-alt">
-      <div className="mx-auto max-w-6xl px-6 py-12">
+      <div className="mx-auto max-w-7xl px-6 py-12">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
           {/* Brand */}
           <div className="max-w-sm">

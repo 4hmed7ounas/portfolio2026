@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+    <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
       <SectionHeading
         title="Get in Touch"
         subtitle="Have a project in mind or just want to say hello? I'd love to hear from you."

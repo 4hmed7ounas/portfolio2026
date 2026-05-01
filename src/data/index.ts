@@ -41,22 +41,26 @@ export interface Award {
 
 export const siteConfig = {
   name: "Ahmed Younas",
-  role: "AI Systems Engineer | Backend Developer",
-  email: "ayds13579@gmail.com",
+  role: "AI Systems Engineer & Full Stack Developer",
+  email: "ahmedyounas007@outlook.com",
   location: "Lahore, Pakistan",
   bio: "I'm Ahmed Younas, a passionate developer and problem solver with a strong focus on AI, DevOps, and full-stack development. I love building intelligent, reliable systems — from FastAPI backends integrated with Stripe billing and MongoDB Atlas, to Next.js web apps enhanced with APIs like Spotify and Twilio.",
   heroTagline: "I Develop Digital Products That Drive Growth & Revenue.",
   heroDescription:
-    "Full-Stack Developer & Robotics Engineer passionate about AI, Web Development, and Circuit Design. Based in Pakistan, Working Globally.",
+    "A passionate developer and problem solver with a strong focus on AI, DevOps, and full-stack development.",
 };
 
 // ─── Social Links ─────────────────────────────────────────────────────────────
 
 export const socialLinks: SocialLink[] = [
   { name: "GitHub", url: "https://github.com/4hmed7ounas", icon: "FaGithub" },
-  { name: "LinkedIn", url: "https://linkedin.com/in/ahmedyounas007", icon: "FaLinkedin" },
+  {
+    name: "LinkedIn",
+    url: "https://linkedin.com/in/ahmedyounas007",
+    icon: "FaLinkedin",
+  },
   { name: "Twitter", url: "https://twitter.com", icon: "FaTwitter" },
-  { name: "Email", url: "mailto:ayds13579@gmail.com", icon: "Mail" },
+  { name: "Email", url: "mailto:ahmedyounas007@outlook.com", icon: "Mail" },
 ];
 
 // ─── Navigation ───────────────────────────────────────────────────────────────
@@ -104,7 +108,8 @@ export const projects: Project[] = [
     title: "WRAITH - Wide Range Autonomous Intelligence",
     description:
       "Advanced voice-controlled, self-driving SLAM robot with two-way voice/text communication. Built with ROS2, Python, Flask, FastAPI, STT, LLM, TTS, Raspberry Pi 5, and RPLidar.",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800",
+    image:
+      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800",
     tags: ["ROS2", "Python", "FastAPI", "AI", "Raspberry Pi"],
     github: "https://github.com/4hmed7ounas/WRAITH",
   },
@@ -112,77 +117,88 @@ export const projects: Project[] = [
     title: "WRAITH - Mobile App",
     description:
       "Mobile application for WRAITH robot control and monitoring. Built with Flutter, FastAPI, Supabase, and LLM integration for seamless robot interaction.",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800",
+    image:
+      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800",
     tags: ["Flutter", "Dart", "FastAPI", "Supabase"],
   },
   {
     title: "AI Blogs Generation Platform",
     description:
       "Built an AI-powered blogs generation agents platform enabling businesses to automate blog creation using LLM-based intelligent workflows and web scraping.",
-    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=800",
+    image:
+      "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=800",
     tags: ["Python", "FastAPI", "Next.js", "LLM", "Web Scraping"],
   },
   {
     title: "3D Food Platform",
     description:
       "Convert 2D food images to 3D models. Frontend using Next.js and Tailwind CSS, backend with Python and FastAPI.",
-    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=800",
+    image:
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=800",
     tags: ["Next.js", "FastAPI", "Python", "3D Modeling"],
   },
   {
     title: "E-commerce Website",
     description:
       "Full-stack e-commerce platform with Next.js, MongoDB, Python, and FastAPI. Features complete shopping experience with secure checkout.",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=800",
+    image:
+      "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=800",
     tags: ["Next.js", "MongoDB", "FastAPI", "Tailwind CSS"],
   },
   {
     title: "Voice Chatbot - Low Latency AI",
     description:
       "Ultra-low latency voice chatbot using Deepgram (STT), Groq (LLM), and Cersatia (TTS). Features Redis caching and Docker.",
-    image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=800",
+    image:
+      "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=800",
     tags: ["Deepgram", "Groq", "Redis", "Docker"],
   },
   {
     title: "GiGo. Chat - AI Chatbot",
     description:
       "An AI-Chatbot developed using Next.js and Gemini API. Users can train the chatbot on their own datasets.",
-    image: "https://images.unsplash.com/photo-1531746790731-6c2079ee3967?auto=format&fit=crop&q=80&w=800",
+    image:
+      "https://images.unsplash.com/photo-1531746790731-6c2079ee3967?auto=format&fit=crop&q=80&w=800",
     tags: ["Next.js", "Gemini API", "AI"],
   },
   {
     title: "Pharmacy Management System",
     description:
       "A Pharmacy Management System to optimize inventory, prescription tracking, and customer info using .NET, SQL and C#.",
-    image: "https://images.unsplash.com/photo-1587854692152-cbe660dbbb88?auto=format&fit=crop&q=80&w=800",
+    image:
+      "https://images.unsplash.com/photo-1587854692152-cbe660dbbb88?auto=format&fit=crop&q=80&w=800",
     tags: [".NET", "SQL", "C#"],
   },
   {
     title: "Light Seeking Robot",
     description:
       "Circuit Analysis based Light Seeking Robot, moves when sensing light using LDR sensors.",
-    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&q=80&w=800",
+    image:
+      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&q=80&w=800",
     tags: ["Robotics", "Circuit Design", "Sensors"],
   },
   {
     title: "6-bit Mini-Computational Unit",
     description:
       "Digital logic design based project using registers, multiplexers, and logic gates for arithmetic and bit operations.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800",
+    image:
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800",
     tags: ["Digital Logic", "Circuits"],
   },
   {
     title: "6-bit Beauty Saloon",
     description:
       "A logical design of a beauty saloon service selector and payment return system.",
-    image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=800",
+    image:
+      "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=800",
     tags: ["Digital Logic", "Design"],
   },
   {
     title: "3D Universal Joint",
     description:
       "3D Model of a Universal Joint created using SolidWorks and AutoCad as a university project.",
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800",
+    image:
+      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800",
     tags: ["SolidWorks", "AutoCad", "3D Design"],
   },
 ];
@@ -194,19 +210,51 @@ export const featuredProjects = projects.slice(0, 3);
 export const skills: Skill[] = [
   {
     category: "Full-Stack & Backend",
-    items: ["Next.js", "React.js", "FastAPI", "Flask", "Node.js", "Express.js", "ASP.NET", "Python"],
+    items: [
+      "Next.js",
+      "React.js",
+      "FastAPI",
+      "Flask",
+      "Node.js",
+      "Express.js",
+      "ASP.NET",
+      "Python",
+    ],
   },
   {
     category: "AI/ML & Voice Tech",
-    items: ["Groq", "Gemini", "Deepgram", "Cersatia", "STT/TTS", "Computer Vision", "LLMs"],
+    items: [
+      "Groq",
+      "Gemini",
+      "Deepgram",
+      "Cersatia",
+      "STT/TTS",
+      "Computer Vision",
+      "LLMs",
+    ],
   },
   {
     category: "Robotics & Embedded",
-    items: ["ROS2", "SLAM", "Raspberry Pi", "RPLidar", "Sensor Fusion", "Circuit Analysis"],
+    items: [
+      "ROS2",
+      "SLAM",
+      "Raspberry Pi",
+      "RPLidar",
+      "Sensor Fusion",
+      "Circuit Analysis",
+    ],
   },
   {
     category: "Databases & Cloud",
-    items: ["MongoDB", "MySQL", "Supabase", "Redis", "Docker", "Vercel", "Fly.io"],
+    items: [
+      "MongoDB",
+      "MySQL",
+      "Supabase",
+      "Redis",
+      "Docker",
+      "Vercel",
+      "Fly.io",
+    ],
   },
   {
     category: "Mobile & UI/UX",
@@ -251,7 +299,8 @@ export const education = [
     degree: "Bachelor's in Computer Science (Robotics & Automations)",
     institution: "FAST - National University of Computer and Emerging Sciences",
     period: "Sept 2021 — Jan 2026",
-    details: "CGPA: 3.11 / 4.0. Coursework: Data Structures, AI, ML, MLOps, GenAI, IOT, Robotics.",
+    details:
+      "CGPA: 3.11 / 4.0. Coursework: Data Structures, AI, ML, MLOps, GenAI, IOT, Robotics.",
   },
 ];
 

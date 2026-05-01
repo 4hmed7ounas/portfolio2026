@@ -17,31 +17,46 @@ export default function Home() {
   return (
     <>
       {/* ─── Hero Section ──────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden min-h-screen flex flex-col justify-end">
         {/* Subtle gradient background */}
         <div className="absolute inset-0 bg-linear-to-br from-accent-light/40 via-background to-background-alt/30 pointer-events-none" />
         <div className="absolute top-20 right-10 w-72 h-72 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-10 left-10 w-96 h-96 bg-accent/3 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="relative mx-auto max-w-6xl px-6 py-24 md:py-36 lg:py-44">
-          <AnimatedSection className="max-w-3xl">
-            <p className="text-sm font-medium text-accent tracking-wide uppercase mb-4">
+        <div className="absolute top-20 mx-auto px-6 xl:px-12 w-full">
+          <AnimatedSection className="flex justify-between w-full">
+            <p className="text-base font-serif text-accent font-medium tracking-wide">
+
+            </p>
+            <p className="text-sm text-foreground/50 tracking-tight text-right">
+              {siteConfig.location}<br />
+              {siteConfig.email}
+            </p>
+          </AnimatedSection>
+        </div>
+
+        <div className="relative mx-auto py-12 max-w-7xl xl:min-w-7xl px-6">
+          <AnimatedSection>
+            <p className="text-6xl md:text-8xl font-serif text-accent font-medium tracking-wide mb-6">
               {siteConfig.role}
             </p>
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight leading-[1.1]">
-              {siteConfig.heroTagline}
+            <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-foreground tracking-tight mb-4">
+              {siteConfig.name}
             </h1>
-            <p className="mt-6 text-lg md:text-xl text-foreground-muted leading-relaxed max-w-2xl">
-              {siteConfig.heroDescription}
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Button href="/projects" variant="primary">
-                View Projects
-                <ArrowRight size={16} />
-              </Button>
-              <Button href="/contact" variant="outline">
-                Contact Me
-              </Button>
+            <hr />
+            <div className="mt-8 flex flex-col xl:flex-row justify-between gap-4">
+              <p className="text-lg md:text-xl text-foreground-muted leading-relaxed max-w-2xl">
+                {siteConfig.heroDescription}
+              </p>
+              <div className="flex gap-4">
+                <Button href="/projects" variant="primary">
+                  View Projects
+                  <ArrowRight size={16} />
+                </Button>
+                <Button href="/contact" variant="outline">
+                  Contact Me
+                </Button>
+              </div>
             </div>
           </AnimatedSection>
         </div>
@@ -49,7 +64,7 @@ export default function Home() {
 
       {/* ─── Highlights Section ────────────────────────────────────────── */}
       <section className="bg-background-alt/50 border-y border-border/50">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <SectionHeading
             title="What I Do"
             subtitle="Focused on delivering exceptional results across every layer of the stack"
@@ -81,7 +96,7 @@ export default function Home() {
       </section>
 
       {/* ─── Featured Projects Section ─────────────────────────────────── */}
-      <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <SectionHeading
           title="Featured Projects"
           subtitle="A selection of my recent work that I'm most proud of"
@@ -103,7 +118,7 @@ export default function Home() {
 
       {/* ─── CTA Section ───────────────────────────────────────────────── */}
       <AnimatedSection className="bg-background-alt/50 border-y border-border/50">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-28 text-center">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground tracking-tight">
             Let&apos;s work together
           </h2>

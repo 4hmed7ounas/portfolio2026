@@ -25,14 +25,13 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-nav-bg backdrop-blur-xl border-b border-border shadow-sm"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+        ? "bg-nav-bg backdrop-blur-xl shadow-sm"
+        : "bg-transparent"
+        }`}
     >
       <nav
-        className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between"
+        className="mx-auto px-6 xl:px-12 py-4 flex items-center justify-between"
         aria-label="Main navigation"
       >
         {/* Logo */}
@@ -53,11 +52,10 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   id={`nav-${link.label.toLowerCase()}`}
-                  className={`relative text-sm font-medium transition-colors duration-200 ${
-                    isActive
-                      ? "text-accent"
-                      : "text-foreground-muted hover:text-foreground"
-                  }`}
+                  className={`relative text-sm font-medium transition-colors duration-200 ${isActive
+                    ? "text-accent"
+                    : "text-foreground-muted hover:text-foreground"
+                    }`}
                 >
                   {link.label}
                   {isActive && (
@@ -79,7 +77,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden p-2 text-foreground hover:text-accent transition-colors"
+          className="md:hidden text-foreground hover:text-accent transition-colors"
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
@@ -112,11 +110,10 @@ export default function Navbar() {
                     <Link
                       href={link.href}
                       id={`nav-mobile-${link.label.toLowerCase()}`}
-                      className={`block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors ${
-                        isActive
-                          ? "bg-accent-light text-accent"
-                          : "text-foreground-muted hover:text-foreground hover:bg-background-alt"
-                      }`}
+                      className={`block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors ${isActive
+                        ? "bg-accent-light text-accent"
+                        : "text-foreground-muted hover:text-foreground hover:bg-background-alt"
+                        }`}
                     >
                       {link.label}
                     </Link>
