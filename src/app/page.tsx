@@ -5,6 +5,7 @@ import ProjectCard from "@/components/ProjectCard";
 import Button from "@/components/Button";
 import { siteConfig, highlights, featuredProjects } from "@/data";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const iconMap = {
   Code2,
@@ -19,7 +20,7 @@ export default function Home() {
       {/* ─── Hero Section ──────────────────────────────────────────────── */}
       <section className="relative overflow-hidden min-h-screen flex flex-col justify-end">
         {/* Subtle gradient background */}
-        <div className="absolute inset-0 bg-linear-to-br from-accent-light/40 via-background to-background-alt/30 pointer-events-none" />
+        <div className="absolute inset-0 bg-linear-to-b from-accent-light/50 via-background to-background-alt/30 pointer-events-none" />
         <div className="absolute top-20 right-10 w-72 h-72 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-10 left-10 w-96 h-96 bg-accent/3 rounded-full blur-3xl pointer-events-none" />
 
@@ -30,7 +31,9 @@ export default function Home() {
             </p>
             <p className="text-sm text-foreground/50 tracking-tight text-right">
               {siteConfig.location}<br />
-              {siteConfig.email}
+              <Link href={`mailto:${siteConfig.email}`}>
+                {siteConfig.email}
+              </Link>
             </p>
           </AnimatedSection>
         </div>
@@ -63,8 +66,8 @@ export default function Home() {
       </section>
 
       {/* ─── Highlights Section ────────────────────────────────────────── */}
-      <section className="bg-background-alt/50 border-y border-border/50">
-        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+      <section className="bg-linear-to-b from-background-alt/30 to-accent-light/50">
+        <div className="mx-auto max-w-7xl px-6 py-12">
           <SectionHeading
             title="What I Do"
             subtitle="Focused on delivering exceptional results across every layer of the stack"
@@ -96,29 +99,31 @@ export default function Home() {
       </section>
 
       {/* ─── Featured Projects Section ─────────────────────────────────── */}
-      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
-        <SectionHeading
-          title="Featured Projects"
-          subtitle="A selection of my recent work that I'm most proud of"
-        />
+      <section className="bg-accent-light/50">
+        <div className="mx-auto max-w-7xl px-6 py-12">
+          <SectionHeading
+            title="Featured Projects"
+            subtitle="A selection of my recent work that I'm most proud of"
+          />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredProjects.map((project, index) => (
-            <ProjectCard key={project.title} project={project} index={index} />
-          ))}
-        </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {featuredProjects.map((project, index) => (
+              <ProjectCard key={project.title} project={project} index={index} />
+            ))}
+          </div>
 
-        <div className="mt-12 text-center">
-          <Button href="/projects" variant="outline">
-            View All Projects
-            <ArrowRight size={16} />
-          </Button>
+          <div className="mt-12 text-center">
+            <Button href="/projects" variant="outline">
+              View All Projects
+              <ArrowRight size={16} />
+            </Button>
+          </div>
         </div>
       </section>
 
       {/* ─── CTA Section ───────────────────────────────────────────────── */}
-      <AnimatedSection className="bg-background-alt/50 border-y border-border/50">
-        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28 text-center">
+      <section className="bg-linear-to-b from-accent-light/50 to-accent-light/40 ">
+        <div className="mx-auto max-w-7xl px-6 py-12 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground tracking-tight">
             Let&apos;s work together
           </h2>
@@ -133,7 +138,7 @@ export default function Home() {
             </Button>
           </div>
         </div>
-      </AnimatedSection>
+      </section>
     </>
   );
 }

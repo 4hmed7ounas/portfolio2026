@@ -16,7 +16,7 @@ export default function AboutPage() {
   return (
     <>
       {/* ─── Intro Section ─────────────────────────────────────────────── */}
-      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
           {/* Image */}
           <AnimatedSection className="md:col-span-4">
@@ -61,7 +61,7 @@ export default function AboutPage() {
 
       {/* ─── Skills Section ────────────────────────────────────────────── */}
       <section className="bg-background-alt/50 border-y border-border/50">
-        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-12">
           <SectionHeading
             title="Skills & Technologies"
             subtitle="The tools and technologies I work with on a daily basis"
@@ -89,7 +89,7 @@ export default function AboutPage() {
       </section>
 
       {/* ─── Experience Section ────────────────────────────────────────── */}
-      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-12">
         <SectionHeading
           title="Experience"
           subtitle="My professional journey in software development"
@@ -133,7 +133,7 @@ export default function AboutPage() {
 
       {/* ─── Education, Certs & Awards ─────────────────────────────────── */}
       <section className="bg-background-alt/50 border-y border-border/50">
-        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Left Column: Education */}
             <div>

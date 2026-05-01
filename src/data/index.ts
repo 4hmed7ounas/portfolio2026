@@ -24,7 +24,14 @@ export interface Skill {
 export interface SocialLink {
   name: string;
   url: string;
-  icon: "FaGithub" | "FaLinkedin" | "FaTwitter" | "Mail";
+  icon:
+    | "FaGithub"
+    | "FaLinkedin"
+    | "FaTwitter"
+    | "Mail"
+    | "FaInstagram"
+    | "FaFacebook"
+    | "FaUpwork";
 }
 
 export interface Certification {
@@ -56,11 +63,26 @@ export const socialLinks: SocialLink[] = [
   { name: "GitHub", url: "https://github.com/4hmed7ounas", icon: "FaGithub" },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/ahmedyounas007",
+    url: "https://www.linkedin.com/in/ahmed-younas-360b481a5",
     icon: "FaLinkedin",
   },
-  { name: "Twitter", url: "https://twitter.com", icon: "FaTwitter" },
+  // { name: "Twitter", url: "https://twitter.com", icon: "FaTwitter" },
   { name: "Email", url: "mailto:ahmedyounas007@outlook.com", icon: "Mail" },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/4hmed7ounas/",
+    icon: "FaInstagram",
+  },
+  {
+    name: "Facebook",
+    url: "https://www.facebook.com/4hmed7ounass",
+    icon: "FaFacebook",
+  },
+  {
+    name: "Upwork",
+    url: "https://www.upwork.com/freelancers/~01d3d4b667f04e2f64?mp_source=share",
+    icon: "FaUpwork",
+  },
 ];
 
 // ─── Navigation ───────────────────────────────────────────────────────────────
@@ -105,13 +127,32 @@ export const highlights = [
 
 export const projects: Project[] = [
   {
-    title: "WRAITH - Wide Range Autonomous Intelligence",
+    title: "AI Blogs Generation Platform",
     description:
-      "Advanced voice-controlled, self-driving SLAM robot with two-way voice/text communication. Built with ROS2, Python, Flask, FastAPI, STT, LLM, TTS, Raspberry Pi 5, and RPLidar.",
+      "Built an AI-powered blogs generation agents platform enabling businesses to automate blog creation using LLM-based intelligent workflows and web scraping.",
     image:
-      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800",
-    tags: ["ROS2", "Python", "FastAPI", "AI", "Raspberry Pi"],
-    github: "https://github.com/4hmed7ounas/WRAITH",
+      "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=800",
+    tags: ["Python", "FastAPI", "Next.js", "LLM", "Web Scraping"],
+    live: "https://blogs-generation-system-frontend.vercel.app/",
+  },
+
+  {
+    title: "Bakhsh Libas - E-commerce Store",
+    description:
+      "A premium Shopify-based e-commerce store for women's fashion, featuring a curated selection of top brands. Implemented custom theme modifications, optimized user experience, and integrated seamless payment and shipping solutions.",
+    image:
+      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=800",
+    tags: ["Shopify", "E-commerce", "Liquid", "Web Design"],
+    live: "https://bakhshlibas.com/",
+  },
+  {
+    title: "Luxe Kitchen Cabinets",
+    description:
+      "A professional WordPress website for kitchen cabinets that showcases premium custom kitchen solutions with a focus on elegant design and user-friendly navigation.",
+    image:
+      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=800",
+    tags: ["WordPress", "Web Development", "PHP", "Responsive Design"],
+    live: "https://luxekitchencabinets.vercel.app/",
   },
   {
     title: "WRAITH - Mobile App",
@@ -122,12 +163,27 @@ export const projects: Project[] = [
     tags: ["Flutter", "Dart", "FastAPI", "Supabase"],
   },
   {
-    title: "AI Blogs Generation Platform",
+    title: "AI Service Booking Agent",
     description:
-      "Built an AI-powered blogs generation agents platform enabling businesses to automate blog creation using LLM-based intelligent workflows and web scraping.",
+      "Built an AI-powered agent that automatically books plumbers, electricians, and other services. Features include live slot checking, data logging, calendar invites, and email notifications. Integrated LLM for intelligent decision-making and automated workflow handling using Google Sheets and Calendar APIs.",
     image:
-      "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=800",
-    tags: ["Python", "FastAPI", "Next.js", "LLM", "Web Scraping"],
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800",
+    tags: [
+      "Python",
+      "Flask",
+      "LLM",
+      "Google Sheets API",
+      "Google Calendar API",
+    ],
+  },
+  {
+    title: "WRAITH - Wide Range Autonomous Intelligence",
+    description:
+      "Advanced voice-controlled, self-driving SLAM robot with two-way voice/text communication. Built with ROS2, Python, Flask, FastAPI, STT, LLM, TTS, Raspberry Pi 5, and RPLidar.",
+    image:
+      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800",
+    tags: ["ROS2", "Python", "FastAPI", "AI", "Raspberry Pi"],
+    github: "https://github.com/4hmed7ounas/WRAITH",
   },
   {
     title: "3D Food Platform",
@@ -231,6 +287,7 @@ export const skills: Skill[] = [
       "STT/TTS",
       "Computer Vision",
       "LLMs",
+      "Function Calling",
     ],
   },
   {
@@ -254,11 +311,21 @@ export const skills: Skill[] = [
       "Docker",
       "Vercel",
       "Fly.io",
+      "Google Sheets & Calendar APIs",
     ],
   },
+
   {
     category: "Mobile & UI/UX",
-    items: ["Flutter", "Dart", "Tailwind CSS", "Figma", "Responsive Design"],
+    items: [
+      "Flutter",
+      "Dart",
+      "Tailwind CSS",
+      "Shopify",
+      "WordPress",
+      "Figma",
+      "Responsive Design",
+    ],
   },
   {
     category: "DevOps & Languages",

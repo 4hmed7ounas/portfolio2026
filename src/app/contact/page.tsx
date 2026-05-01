@@ -4,13 +4,23 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 import ContactForm from "@/components/ContactForm";
 import { siteConfig, socialLinks } from "@/data";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
+import { FaUpwork } from "react-icons/fa6";
 
 const socialIconMap = {
   FaGithub,
   FaLinkedin,
   FaTwitter,
   Mail,
+  FaUpwork,
+  FaFacebook,
+  FaInstagram,
 };
 
 export const metadata: Metadata = {
@@ -21,7 +31,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+    <section className="mx-auto max-w-7xl px-6 py-12">
       <SectionHeading
         title="Get in Touch"
         subtitle="Have a project in mind or just want to say hello? I'd love to hear from you."

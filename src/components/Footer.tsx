@@ -1,18 +1,28 @@
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
 import { siteConfig, socialLinks, navLinks } from "@/data";
 import { Mail } from "lucide-react";
+import { FaUpwork } from "react-icons/fa6";
 
 const iconMap = {
   FaGithub,
   FaLinkedin,
   FaTwitter,
   Mail,
+  FaInstagram,
+  FaFacebook,
+  FaUpwork,
 };
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border bg-background-alt">
+    <footer className="bg-accent-light/40">
       <div className="mx-auto max-w-7xl px-6 py-12">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
           {/* Brand */}
