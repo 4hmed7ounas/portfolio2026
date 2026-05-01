@@ -1,5 +1,7 @@
 // ─── Types ────────────────────────────────────────────────────────────────────
 
+import { assets } from "./assets";
+
 export interface Project {
   title: string;
   description: string;
@@ -130,8 +132,7 @@ export const projects: Project[] = [
     title: "AI Blogs Generation Platform",
     description:
       "Built an AI-powered blogs generation agents platform enabling businesses to automate blog creation using LLM-based intelligent workflows and web scraping.",
-    image:
-      "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=800",
+    image: assets.blogGeneration,
     tags: ["Python", "FastAPI", "Next.js", "LLM", "Web Scraping"],
     live: "https://blogs-generation-system-frontend.vercel.app/",
   },
@@ -140,8 +141,7 @@ export const projects: Project[] = [
     title: "Bakhsh Libas - E-commerce Store",
     description:
       "A premium Shopify-based e-commerce store for women's fashion, featuring a curated selection of top brands. Implemented custom theme modifications, optimized user experience, and integrated seamless payment and shipping solutions.",
-    image:
-      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=800",
+    image: assets.bakhshLibas,
     tags: ["Shopify", "E-commerce", "Liquid", "Web Design"],
     live: "https://bakhshlibas.com/",
   },
@@ -149,8 +149,7 @@ export const projects: Project[] = [
     title: "Luxe Kitchen Cabinets",
     description:
       "A professional WordPress website for kitchen cabinets that showcases premium custom kitchen solutions with a focus on elegant design and user-friendly navigation.",
-    image:
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=800",
+    image: assets.luxeKitchenCabinets,
     tags: ["WordPress", "Web Development", "PHP", "Responsive Design"],
     live: "https://luxekitchencabinets.vercel.app/",
   },
@@ -158,8 +157,7 @@ export const projects: Project[] = [
     title: "WRAITH - Mobile App",
     description:
       "Mobile application for WRAITH robot control and monitoring. Built with Flutter, FastAPI, Supabase, and LLM integration for seamless robot interaction.",
-    image:
-      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800",
+    image: assets.wraithApp,
     tags: ["Flutter", "Dart", "FastAPI", "Supabase"],
   },
   {
@@ -180,8 +178,7 @@ export const projects: Project[] = [
     title: "WRAITH - Wide Range Autonomous Intelligence",
     description:
       "Advanced voice-controlled, self-driving SLAM robot with two-way voice/text communication. Built with ROS2, Python, Flask, FastAPI, STT, LLM, TTS, Raspberry Pi 5, and RPLidar.",
-    image:
-      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800",
+    image: assets.wraithWeb,
     tags: ["ROS2", "Python", "FastAPI", "AI", "Raspberry Pi"],
     github: "https://github.com/4hmed7ounas/WRAITH",
   },
@@ -189,16 +186,14 @@ export const projects: Project[] = [
     title: "3D Food Platform",
     description:
       "Convert 2D food images to 3D models. Frontend using Next.js and Tailwind CSS, backend with Python and FastAPI.",
-    image:
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=800",
+    image: assets.food3D,
     tags: ["Next.js", "FastAPI", "Python", "3D Modeling"],
   },
   {
-    title: "E-commerce Website",
+    title: "Ilahi Fabrics - E-commerce Website",
     description:
       "Full-stack e-commerce platform with Next.js, MongoDB, Python, and FastAPI. Features complete shopping experience with secure checkout.",
-    image:
-      "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=800",
+    image: assets.ilahiFabrics,
     tags: ["Next.js", "MongoDB", "FastAPI", "Tailwind CSS"],
   },
   {
@@ -213,8 +208,7 @@ export const projects: Project[] = [
     title: "GiGo. Chat - AI Chatbot",
     description:
       "An AI-Chatbot developed using Next.js and Gemini API. Users can train the chatbot on their own datasets.",
-    image:
-      "https://images.unsplash.com/photo-1531746790731-6c2079ee3967?auto=format&fit=crop&q=80&w=800",
+    image: assets.gigoChatbot,
     tags: ["Next.js", "Gemini API", "AI"],
   },
   {

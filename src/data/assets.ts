@@ -1,0 +1,16 @@
+export const assets = {
+  analyticsSupportiyo: "/projects/analytics-supportiyo.png",
+  bakhshLibas: "/projects/bakhsh-libas.png",
+  blogGeneration: "/projects/blog-generation.png",
+  cox: "/projects/cox.png",
+  dashboardCallDetails: "/projects/dashboard-call-details.png",
+  dashboardSupportiyo: "/projects/dashboard-supportiyo.png",
+  luxeKitchenCabinets: "/projects/luxe-kitchen-cabinets.png",
+  deepTraces: "/projects/deeptraces.png",
+  flySimple: "/projects/fly-simple.png",
+  food3D: "/projects/food3d.png",
+  gigoChatbot: "/projects/gigo-chatbot.png",
+  ilahiFabrics: "/projects/ilahi-fabrics.png",
+  wraithApp: "/projects/wraith-app.png",
+  wraithWeb: "/projects/wraith-web.png",
+};
