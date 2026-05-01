@@ -3,27 +3,39 @@
 /* ─── Design Tokens ─────────────────────────────────────────────────────────── */
 
 :root {
-  --background: #fafafa;
-  --background-alt: #f5f3ef;
-  --foreground: #1a1a1a;
-  --foreground-muted: #6b7280;
-  --accent: #4f46e5;
-  --accent-hover: #4338ca;
-  --accent-light: #eef2ff;
-  --border: #e5e7eb;
-  --border-hover: #d1d5db;
+  --background: #f5f3f1;
+  --background-alt: #e6e1db;
+  --foreground: #000000;
+  --foreground-muted: #55423e;
+  --accent: #000000;
+  --accent-hover: #2a1f1e;
+  --accent-light: #d0c5b8;
+  --border: #d0c5b8;
+  --border-hover: #b4a290;
   --card-bg: #ffffff;
   --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
-  --card-shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.08),
-    0 4px 10px rgba(0, 0, 0, 0.04);
-  --nav-bg: rgba(250, 250, 250, 0.85);
-  --selection-bg: #c7d2fe;
-  --selection-text: #1e1b4b;
+  --card-shadow-hover:
+    0 10px 25px rgba(0, 0, 0, 0.08), 0 4px 10px rgba(0, 0, 0, 0.04);
+  --nav-bg: rgba(245, 243, 241, 0.85);
+  --selection-bg: #d0c5b8;
+  --selection-text: #2a1f1e;
 }
 
 /* ─── Tailwind v4 Theme Integration ──────────────────────────────────────── */
 
 @theme inline {
+  --color-sandrift-50: #f5f3f1;
+  --color-sandrift-100: #e6e1db;
+  --color-sandrift-200: #d0c5b8;
+  --color-sandrift-300: #b4a290;
+  --color-sandrift-400: #a48d79;
+  --color-sandrift-500: #907562;
+  --color-sandrift-600: #7b6153;
+  --color-sandrift-700: #634d45;
+  --color-sandrift-800: #55423e;
+  --color-sandrift-900: #4b3b38;
+  --color-sandrift-950: #2a1f1e;
+
   --color-background: var(--background);
   --color-background-alt: var(--background-alt);
   --color-foreground: var(--foreground);
