@@ -5,6 +5,8 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 import SkillBadge from "@/components/SkillBadge";
 import { siteConfig, skills, experience, education, certifications, awards } from "@/data";
+import { assets } from "@/data/assets";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About",
@@ -14,53 +16,78 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <>
+    <><div className="bg-linear-to-b from-accent-light/40 via-background to-background-alt/30">
       {/* ─── Intro Section ─────────────────────────────────────────────── */}
-      <section className="mx-auto max-w-7xl px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+      <section className="mx-auto max-w-7xl px-6 py-12 pt-40 min-h-screen flex items-end justify-center">
+
+        <div className="absolute top-20 mx-auto px-6 xl:px-12 w-full">
+          <AnimatedSection className="flex justify-between w-full">
+            <p className="text-base font-serif text-accent font-medium tracking-wide">
+              {/* Optional: Add something here if needed */}
+            </p>
+            <p className="text-sm text-foreground/50 tracking-tight text-right">
+              {siteConfig.location}<br />
+              <Link href={`mailto:${siteConfig.email}`} className="hover:text-accent transition-colors">
+                {siteConfig.email}
+              </Link>
+            </p>
+          </AnimatedSection>
+        </div>
+        <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Image */}
-          <AnimatedSection className="md:col-span-4">
-            <div className="relative aspect-square max-w-sm mx-auto md:mx-0 rounded-2xl overflow-hidden border-2 border-border shadow-card">
+          <AnimatedSection className="lg:col-span-4">
+            <div className="relative aspect-video lg:aspect-square max-w-sm mx-auto lg:mx-0 rounded-2xl overflow-hidden border-2 border-border shadow-card">
               <Image
-                src="/profile.webp"
+                src={assets.aboutImage}
                 alt={`Portrait of ${siteConfig.name}`}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 33vw"
+                width={1500}
+                height={1500}
+                className="object-cover w-full h-full"
                 priority
               />
+            </div>
+            <div className="grid grid-cols-2 gap-8 pt-12">
+              {[
+                { label: "Years building", value: "2+" },
+                { label: "Projects shipped", value: "10+" },
+                { label: "Core product built", value: "1" },
+                { label: "Domains explored", value: "3+" },
+              ].map((stat, index) => (
+                <AnimatedSection
+                  key={stat.label}
+                  delay={index * 0.1}
+                  className="text-center"
+                >
+                  <div className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-2">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm text-foreground-muted uppercase tracking-wider font-medium">
+                    {stat.label}
+                  </div>
+                </AnimatedSection>
+              ))}
             </div>
           </AnimatedSection>
 
           {/* Bio */}
-          <AnimatedSection delay={0.15} className="md:col-span-8">
-            <p className="text-sm font-medium text-accent tracking-wide uppercase mb-3">
-              About Me
-            </p>
-            <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground tracking-tight">
-              Hi, I&apos;m {siteConfig.name}
+          <AnimatedSection delay={0.15} className="lg:col-span-8">
+            <h1 className="font-serif text-3xl lg:text-5xl font-bold text-foreground tracking-tight">
+              Who I am
             </h1>
             <div className="mt-5 space-y-4 text-foreground-muted leading-relaxed">
-              <p>
-                I&apos;m a passionate developer and problem solver based in{" "}
-                <span className="text-foreground font-medium">
-                  {siteConfig.location}
-                </span>{" "}
-                with a strong focus on AI, DevOps, and full-stack development.
-              </p>
-              <p>
-                I love building intelligent, reliable systems — from FastAPI backends integrated with Stripe billing and MongoDB Atlas, to Next.js web apps enhanced with APIs like Spotify and Twilio. My recent work blends machine learning, LLMs, and cloud automation, where I&apos;ve explored areas like speech recognition, voice bots, and AI-powered agents.
-              </p>
-              <p>
-                Beyond code, I&apos;m deeply interested in robotics (ROS2), CI/CD pipelines, and building production-ready systems that scale. My goal is to craft products that are not only technically solid but also deliver real impact through intelligent automation and clean design.
-              </p>
+              {siteConfig.aboutDescription
+                .split("\n")
+                .map((line, index) => (
+                  <p key={index}>{line}</p>
+                ))}
             </div>
           </AnimatedSection>
         </div>
       </section>
+    </div>
 
       {/* ─── Skills Section ────────────────────────────────────────────── */}
-      <section className="bg-background-alt/50 border-y border-border/50">
+      <section className="bg-background-alt/30">
         <div className="mx-auto max-w-7xl px-6 py-12">
           <SectionHeading
             title="Skills & Technologies"
@@ -88,51 +115,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ─── Experience Section ────────────────────────────────────────── */}
-      <section className="mx-auto max-w-7xl px-6 py-12">
-        <SectionHeading
-          title="Experience"
-          subtitle="My professional journey in software development"
-        />
-
-        <div className="max-w-3xl mx-auto space-y-0">
-          {experience.map((exp, index) => (
-            <AnimatedSection
-              key={exp.company + exp.role}
-              delay={index * 0.1}
-              className="relative pl-10 pb-10 last:pb-0"
-            >
-              {/* Timeline line */}
-              {index < experience.length - 1 && (
-                <div className="absolute left-[17px] top-10 bottom-0 w-px bg-border" />
-              )}
-
-              {/* Timeline dot */}
-              <div className="absolute left-0 top-1 w-[35px] h-[35px] rounded-full bg-accent-light border-2 border-accent flex items-center justify-center">
-                <Briefcase size={14} className="text-accent" />
-              </div>
-
-              <div>
-                <span className="text-xs font-medium text-accent tracking-wide uppercase">
-                  {exp.period}
-                </span>
-                <h3 className="mt-1 font-semibold text-foreground text-lg">
-                  {exp.role}
-                </h3>
-                <p className="text-sm text-foreground-muted font-medium">
-                  {exp.company}
-                </p>
-                <p className="mt-2 text-sm text-foreground-muted leading-relaxed">
-                  {exp.description}
-                </p>
-              </div>
-            </AnimatedSection>
-          ))}
-        </div>
-      </section>
-
       {/* ─── Education, Certs & Awards ─────────────────────────────────── */}
-      <section className="bg-background-alt/50 border-y border-border/50">
+      <section className="bg-linear-to-b from-background-alt/30 to-accent-light/40">
         <div className="mx-auto max-w-7xl px-6 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Left Column: Education */}

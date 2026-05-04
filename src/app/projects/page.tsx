@@ -11,17 +11,19 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-12">
-      <SectionHeading
-        title="All Projects"
-        subtitle="A comprehensive showcase of my work, from concept to deployment"
-      />
+    <div className="bg-linear-to-b from-accent-light/40 via-background-alt/30 to-accent-light/40">
+      <section className="mx-auto max-w-7xl px-6 py-12 pt-30">
+        <SectionHeading
+          title="All Projects"
+          subtitle="A comprehensive showcase of my work, from concept to deployment"
+        />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((project, index) => (
-          <ProjectCard key={project.title} project={project} index={index} />
-        ))}
-      </div>
-    </section>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project, index) => (
+            <ProjectCard key={project.title} project={project} index={index} />
+          ))}
+        </div>
+      </section>
+    </div>
   );
 }

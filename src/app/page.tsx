@@ -78,7 +78,7 @@ export default function Home() {
             {/* Left Column: Bio */}
             <div className="lg:col-span-7 space-y-8">
               <AnimatedSection>
-                <div className="space-y-6 text-xl text-foreground/80 leading-relaxed font-medium whitespace-pre-wrap">
+                <div className="space-y-6 text-foreground/80 leading-relaxed font-medium whitespace-pre-wrap">
                   {siteConfig.bio}
                 </div>
               </AnimatedSection>

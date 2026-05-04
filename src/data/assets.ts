@@ -13,4 +13,5 @@ export const assets = {
   ilahiFabrics: "/projects/ilahi-fabrics.png",
   wraithApp: "/projects/wraith-app.png",
   wraithWeb: "/projects/wraith-web.png",
+  aboutImage: "/images/about-image.png",
 };
