@@ -67,72 +67,60 @@ export default function Home() {
       </section>
 
       {/* ─── About Section (Stack, Tools, Education) ──────────────────── */}
-      <section id="about" className="bg-background-alt/30 py-24">
+      <section id="about" className="py-12 bg-background-alt/30">
         <div className="mx-auto max-w-7xl px-6">
           <SectionHeading
             title="About & Expertise"
             subtitle="My technical foundation and academic background"
           />
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            {/* Left: Bio & Skills */}
-            <div className="lg:col-span-8 space-y-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            {/* Left Column: Bio */}
+            <div className="lg:col-span-7 space-y-8">
               <AnimatedSection>
-                <p className="text-lg text-foreground-muted leading-relaxed">
+                <div className="space-y-6 text-xl text-foreground/80 leading-relaxed font-medium whitespace-pre-wrap">
                   {siteConfig.bio}
-                </p>
+                </div>
               </AnimatedSection>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {skills.slice(0, 4).map((group, groupIndex) => (
-                  <AnimatedSection
-                    key={group.category}
-                    delay={groupIndex * 0.1}
-                    className="p-6 rounded-2xl bg-card-bg border border-border"
-                  >
-                    <h3 className="font-semibold text-foreground text-base mb-4 flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent" />
-                      {group.category}
-                    </h3>
-                    <div className="flex flex-wrap gap-2">
-                      {group.items.map((skill) => (
-                        <SkillBadge key={skill} name={skill} />
-                      ))}
-                    </div>
-                  </AnimatedSection>
-                ))}
-              </div>
             </div>
 
-            {/* Right: Education */}
-            <div className="lg:col-span-4 space-y-6">
-              <h3 className="font-serif text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
-                <GraduationCap className="text-accent" />
-                Education
-              </h3>
-              <div className="space-y-4">
-                {education.map((edu, index) => (
-                  <AnimatedSection
-                    key={edu.institution}
-                    delay={index * 0.1}
-                    className="p-6 rounded-2xl bg-card-bg border border-border"
-                  >
-                    <h4 className="font-semibold text-foreground leading-tight">
-                      {edu.degree}
-                    </h4>
-                    <p className="text-sm text-foreground-muted mt-1">
-                      {edu.institution}
-                    </p>
-                    <p className="text-xs text-accent mt-2 font-medium">
-                      {edu.period}
-                    </p>
-                    {edu.details && (
-                      <p className="text-xs text-foreground-muted mt-3 leading-relaxed">
-                        {edu.details}
+            {/* Right Column: Stack & Tools + Education */}
+            <div className="lg:col-span-5 space-y-12">
+              {/* Stack & Tools */}
+              <div>
+                <h3 className="text-xs font-bold text-foreground-muted/60 uppercase tracking-[0.2em] mb-6">
+                  STACK & TOOLS
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {skills.flatMap(s => s.items.slice(0, 4)).map((skill, index) => (
+                    <AnimatedSection
+                      key={`${skill}-${index}`}
+                      delay={index * 0.01}
+                      className="px-3 py-1.5 border border-border/60 text-sm font-medium text-foreground/70 rounded-xs bg-transparent"
+                    >
+                      {skill}
+                    </AnimatedSection>
+                  ))}
+                </div>
+              </div>
+
+              {/* Education */}
+              <div className="pt-8 border-t border-border/40">
+                <h3 className="text-xs font-bold text-foreground-muted/60 uppercase tracking-[0.2em] mb-6">
+                  EDUCATION
+                </h3>
+                <div className="space-y-6">
+                  {education.map((edu, index) => (
+                    <AnimatedSection key={edu.institution} delay={index * 0.1}>
+                      <h4 className="font-bold text-foreground text-lg tracking-tight leading-tight">
+                        {edu.degree}
+                      </h4>
+                      <p className="text-foreground-muted/80 font-medium">
+                        {edu.institution}, {edu.period}
                       </p>
-                    )}
-                  </AnimatedSection>
-                ))}
+                    </AnimatedSection>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -140,13 +128,11 @@ export default function Home() {
       </section>
 
       {/* ─── Experience Section ────────────────────────────────────────── */}
-      <section id="experience" className="py-24 bg-[#f8f5f0]">
+      <section id="experience" className="py-12 bg-background-alt/30">
         <div className="mx-auto max-w-7xl px-6">
           <SectionHeading
             title="Experience"
-            align="left"
-            showAccent={false}
-            className="!mb-0"
+            subtitle="My professional journey and achievements"
           />
 
           <div className="mt-12 border-t border-border/40">
@@ -184,7 +170,7 @@ export default function Home() {
       </section>
 
       {/* ─── Selected Work Section ───────────────────────────────────── */}
-      <section id="work" className="py-24 bg-background-alt/30">
+      <section id="work" className="py-12 bg-background-alt/30">
         <div className="mx-auto max-w-7xl px-6">
           <SectionHeading
             title="Selected Work"
@@ -207,7 +193,7 @@ export default function Home() {
       </section>
 
       {/* ─── GitHub Contribution Section ──────────────────────────────── */}
-      <section className="py-24 bg-background">
+      <section className="py-12 bg-linear-to-b from-background-alt/30 to-accent-light/60">
         <div className="mx-auto max-w-7xl px-6">
           <SectionHeading
             title="GitHub Activity"
@@ -225,7 +211,7 @@ export default function Home() {
       </section>
 
       {/* ─── CTA Section ───────────────────────────────────────────────── */}
-      <section className="py-24 bg-linear-to-b from-accent-light/30 to-background border-t border-border/50">
+      <section className="py-12 bg-linear-to-b from-accent-light/60 to-accent-light/40">
         <div className="mx-auto max-w-7xl px-6 text-center">
           <AnimatedSection>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground tracking-tight mb-6">

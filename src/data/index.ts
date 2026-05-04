@@ -53,10 +53,10 @@ export const siteConfig = {
   role: "AI Systems Engineer & Full Stack Developer",
   email: "ahmedyounas007@outlook.com",
   location: "Lahore, Pakistan",
-  bio: "I'm Ahmed Younas, a passionate developer and problem solver with a strong focus on AI, DevOps, and full-stack development. I love building intelligent, reliable systems — from FastAPI backends integrated with Stripe billing and MongoDB Atlas, to Next.js web apps enhanced with APIs like Spotify and Twilio.",
+  bio: "Motivated and detail-oriented AI Systems Engineer and Full-Stack Developer with hands-on experience in building production-grade applications using Python, FastAPI, Node.js, Next.js, and React. Strong background in designing backend systems, integrating external services, and developing complete end-to-end products with clean, maintainable architecture.\n\nI specialise in developing API-driven platforms, automation workflows, and real-time systems, along with crafting fast, responsive, and user-focused web interfaces. My work includes building structured backend services, handling data pipelines, integrating third-party APIs such as Stripe and Google services, and creating systems that are reliable, scalable, and easy to extend.\n\nI have developed and deployed applications from concept to production, including systems with voice-based interactions, automated scheduling, and multi-tenant architectures. I focus on writing efficient code, optimising performance, and ensuring smooth communication between frontend and backend systems. Passionate about solving practical problems, I continuously work on improving system design, scalability, and modern development practices.",
   heroTagline: "I Develop Digital Products That Drive Growth & Revenue.",
   heroDescription:
-    "A passionate developer and problem solver with a strong focus on AI, DevOps, and full-stack development.",
+    "A passionate developer and problem solver with a strong focus on AI, Robotics, Automations, DevOps, and full-stack development.",
 };
 
 // ─── Social Links ─────────────────────────────────────────────────────────────
@@ -177,9 +177,9 @@ export const projects: Project[] = [
   {
     title: "WRAITH - Wide Range Autonomous Intelligence",
     description:
-      "Advanced voice-controlled, self-driving SLAM robot with two-way voice/text communication. Built with ROS2, Python, Flask, FastAPI, STT, LLM, TTS, Raspberry Pi 5, and RPLidar.",
+      "Advanced voice-controlled, self-driving SLAM robot with two-way voice/text communication. Built with ROS, Python, Flask, FastAPI, STT, LLM, TTS, Raspberry Pi 5, and RPLidar.",
     image: assets.wraithWeb,
-    tags: ["ROS2", "Python", "FastAPI", "AI", "Raspberry Pi"],
+    tags: ["ROS", "SLAM", "Python", "FastAPI", "AI"],
     github: "https://github.com/4hmed7ounas/WRAITH",
   },
   {
@@ -205,11 +205,11 @@ export const projects: Project[] = [
     tags: ["Deepgram", "Groq", "Redis", "Docker"],
   },
   {
-    title: "GiGo. Chat - AI Chatbot",
+    title: "GiGO - AI Chatbot & Freelancing Platform",
     description:
-      "An AI-Chatbot developed using Next.js and Gemini API. Users can train the chatbot on their own datasets.",
+      "An AI-Chatbot and freelancing platform developed using Next.js, TypeScript, and Firebase. Features custom dataset training and intelligent matching.",
     image: assets.gigoChatbot,
-    tags: ["Next.js", "Gemini API", "AI"],
+    tags: ["Next.js", "TypeScript", "Firebase", "Node.js", "AI"],
   },
   {
     title: "Pharmacy Management System",
@@ -259,71 +259,104 @@ export const featuredProjects = projects.slice(0, 3);
 
 export const skills: Skill[] = [
   {
-    category: "Full-Stack & Backend",
+    category: "AI, ML & Voice Tech",
+    items: [
+      "Generative AI Tools",
+      "Prompt Engineering",
+      "AI Voice Systems",
+      "Zapier, Make, n8n",
+      "Large Language Models (LLMs)",
+      "Groq",
+      "OpenAI",
+      "Gemini",
+      "Deepgram",
+      "Cersatia",
+      "Ollama",
+      "ElevenLabs",
+      "STT/TTS",
+      "Computer Vision",
+      "Function Calling",
+      "MLOps",
+    ],
+  },
+  {
+    category: "Full-Stack & Web",
     items: [
       "Next.js",
       "React.js",
       "FastAPI",
-      "Flask",
       "Node.js",
       "Express.js",
+      "Flask",
+      "Django",
       "ASP.NET",
-      "Python",
-    ],
-  },
-  {
-    category: "AI/ML & Voice Tech",
-    items: [
-      "Groq",
-      "Gemini",
-      "Deepgram",
-      "Cersatia",
-      "STT/TTS",
-      "Computer Vision",
-      "LLMs",
-      "Function Calling",
+      "Three.js",
+      "Tailwind CSS",
+      "TypeScript",
+      "JavaScript",
+      "HTML/CSS",
     ],
   },
   {
     category: "Robotics & Embedded",
     items: [
-      "ROS2",
-      "SLAM",
+      "ROS / ROS2",
+      "Visual SLAM",
       "Raspberry Pi",
       "RPLidar",
       "Sensor Fusion",
+      "Robotics",
+      "Lego Robotics",
       "Circuit Analysis",
+      "Digital Logic Design",
+      "SOLIDWORKS",
+      "AutoCAD",
     ],
   },
   {
-    category: "Databases & Cloud",
+    category: "Cloud & Databases",
     items: [
-      "MongoDB",
-      "MySQL",
+      "Firebase",
       "Supabase",
+      "MongoDB",
+      "Vercel / Fly.io / Render.com",
+      "MySQL",
+      "PostgreSQL",
+      "Microsoft Azure",
       "Redis",
       "Docker",
-      "Vercel",
-      "Fly.io",
-      "Google Sheets & Calendar APIs",
+      "System Architecture",
+      "Google APIs",
     ],
   },
-
   {
-    category: "Mobile & UI/UX",
+    category: "Mobile & Design",
     items: [
       "Flutter",
       "Dart",
-      "Tailwind CSS",
-      "Shopify",
       "WordPress",
+      "Shopify",
+      "Wix",
+      "Webflow",
+      "UI/UX Design",
       "Figma",
-      "Responsive Design",
+      "Graphic Design",
+      "Canva",
+      "Responsive Web Design",
     ],
   },
   {
-    category: "DevOps & Languages",
-    items: ["Docker", "CI/CD", "C/C++", "C#", "Git", "Bash"],
+    category: "Languages & Tools",
+    items: [
+      "Python",
+      "C / C++ / C#",
+      "Git / GitHub",
+      "CI/CD",
+      "Bash",
+      "Assembly Language",
+      "Technical Leadership",
+      "Problem Solving",
+    ],
   },
 ];
 
@@ -404,6 +437,11 @@ export const education = [
     period: "Sept 2021 — Jan 2026",
     details:
       "CGPA: 3.11 / 4.0. Coursework: Data Structures, AI, ML, MLOps, GenAI, IOT, Robotics.",
+  },
+  {
+    degree: "F.Sc Pre-Engineering",
+    institution: "Punjab Group of Colleges",
+    period: "Sept 2019 — Jul 2021",
   },
 ];
 

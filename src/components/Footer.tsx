@@ -35,7 +35,7 @@ export default function Footer() {
               {siteConfig.name}
             </Link>
             <p className="mt-3 text-sm text-foreground-muted leading-relaxed">
-              {siteConfig.bio}
+              {siteConfig.heroDescription}
             </p>
           </div>
 
