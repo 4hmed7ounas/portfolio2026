@@ -7,6 +7,7 @@ interface SectionHeadingProps {
   subtitle?: string;
   className?: string;
   align?: "left" | "center";
+  showAccent?: boolean;
 }
 
 export default function SectionHeading({
@@ -14,6 +15,7 @@ export default function SectionHeading({
   subtitle,
   className = "",
   align = "center",
+  showAccent = true,
 }: SectionHeadingProps) {
   const alignClass = align === "center" ? "text-center" : "text-left";
 
@@ -33,11 +35,13 @@ export default function SectionHeading({
           {subtitle}
         </p>
       )}
-      <div
-        className={`mt-4 h-1 w-12 rounded-full bg-accent ${
-          align === "center" ? "mx-auto" : ""
-        }`}
-      />
+      {showAccent && (
+        <div
+          className={`mt-4 h-1 w-12 rounded-full bg-accent ${
+            align === "center" ? "mx-auto" : ""
+          }`}
+        />
+      )}
     </motion.div>
   );
 }

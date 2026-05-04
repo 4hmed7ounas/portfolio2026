@@ -331,26 +331,68 @@ export const skills: Skill[] = [
 
 export const experience: Experience[] = [
   {
-    role: "Founding Engineer",
-    company: "Supportiyo LTD",
-    period: "Jan 2025 — Present",
+    role: "Founding Software Engineer",
+    company: "Supportiyo",
+    period: "Dec 2025 — Present",
     description:
-      "Building and integrating AI-driven solutions for real-time customer communication. Working with Next.js, FastAPI, and MongoDB. Integrating Twilio, Stripe, and Deepgram to automate call handling and billing.",
+      "Leading Supportiyo's technology and product engineering across AI voice systems, backend infrastructure, and platform development. Responsible for system architecture, scalability, security, and production readiness.",
   },
   {
-    role: "Trainee Mobile App & Web Developer",
+    role: "Voice System Architect",
+    company: "Supportiyo",
+    period: "Jan 2025 — Dec 2025",
+    description:
+      "Contributed to the design and development of advanced voice communication systems in the Product Development Team.",
+  },
+  {
+    role: "Web & Mobile App Developer",
+    company: "Upwork (Freelance)",
+    period: "Sep 2024 — Present",
+    description:
+      "Freelance developer specializing in Node.js, Next.js, and mobile applications. Also providing expertise in electrical circuit design with a focus on digital logic.",
+  },
+  {
+    role: "Trainee Web Developer",
     company: "Grootcore Systems",
-    period: "Jun 2024 — Dec 2024",
+    period: "Sep 2024 — Jan 2025",
     description:
-      "Developed responsive applications using Next.js, React and Tailwind CSS. Built mobile interfaces using Flutter and Dart. Optimized API performance and integrated AI-driven features.",
+      "Focused on Next.js, Tailwind CSS, and MERN stack. Contributed to innovative projects in a collaborative environment.",
   },
   {
-    role: "Freelance Developer",
-    company: "UpWork",
-    period: "2022 — Present",
+    role: "Trainee Mobile Developer",
+    company: "Grootcore Systems",
+    period: "Jun 2024 — Nov 2024",
     description:
-      "Specializing in web development, electrical circuit design, and digital logic design. Successfully completed multiple projects with 5-star ratings.",
+      "Honed skills in Flutter and Dart while building mobile interfaces and optimizing app performance.",
   },
+  // {
+  //   role: "Media Coordinator",
+  //   company: "IEEE NUCES LAHORE",
+  //   period: "Oct 2024 — Dec 2024",
+  //   description:
+  //     "Led media coordination and visual content creation using Canva, while managing team leadership for the student chapter.",
+  // },
+  {
+    role: "Frontend Developer & Graphic Designer",
+    company: "Entracloud",
+    period: "Jun 2024 — Aug 2024",
+    description:
+      "Dual role involving frontend development with HTML/CSS and creating visual assets using Figma and Canva.",
+  },
+  {
+    role: "Circuit Designer & Programmer",
+    company: "Fiverr (Freelance)",
+    period: "Jan 2022 — Aug 2024",
+    description:
+      "Specialized in digital logic design, circuit simulation (LogicWorks, CircuitMaker), and programming in C++ and Assembly Language.",
+  },
+  // {
+  //   role: "Deputy Head (Robo Rumble & Videography)",
+  //   company: "SOFTEC",
+  //   period: "Jan 2024 — Jun 2024",
+  //   description:
+  //     "Co-led the Robo Rumble event and managed the videography department, overseeing event planning and video production.",
+  // },
 ];
 
 // ─── Education ────────────────────────────────────────────────────────────────
