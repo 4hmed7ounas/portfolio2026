@@ -17,8 +17,8 @@ const philosopher = Philosopher({
 
 export const metadata: Metadata = {
   title: {
-    default: "Ahmed Younas — AI Systems Engineer & Full Stack Developer",
-    template: "%s — Ahmed Younas",
+    default: "Ahmed Younas - AI Systems Engineer & Full Stack Developer",
+    template: "%s | Ahmed Younas - AI Systems Engineer & Full Stack Developer",
   },
   description:
     "Full-stack software developer specializing in React, Next.js, and Node.js. Building performant, elegant web applications.",

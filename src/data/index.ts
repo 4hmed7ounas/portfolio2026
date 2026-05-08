@@ -218,7 +218,7 @@ export const projects: Project[] = [
     description:
       "A Pharmacy Management System to optimize inventory, prescription tracking, and customer info using .NET, SQL and C#.",
     image:
-      "https://images.unsplash.com/photo-1587854692152-cbe660dbbb88?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1676364423874-19c785db3e61?auto=format&fit=crop&q=80&w=800",
     tags: [".NET", "SQL", "C#"],
   },
   {
@@ -226,7 +226,7 @@ export const projects: Project[] = [
     description:
       "Circuit Analysis based Light Seeking Robot, moves when sensing light using LDR sensors.",
     image:
-      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1616857002727-7d4228493f2d?auto=format&fit=crop&q=80&w=800",
     tags: ["Robotics", "Circuit Design", "Sensors"],
   },
   {
@@ -242,7 +242,7 @@ export const projects: Project[] = [
     description:
       "A logical design of a beauty saloon service selector and payment return system.",
     image:
-      "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1605165467147-e34d3d5467b9?auto=format&fit=crop&q=80&w=800",
     tags: ["Digital Logic", "Design"],
   },
   {
