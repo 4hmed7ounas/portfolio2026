@@ -48,10 +48,10 @@ export default function AboutPage() {
             </div>
             <div className="grid grid-cols-2 gap-8 pt-12">
               {[
-                { label: "Years building", value: "2+" },
-                { label: "Projects shipped", value: "10+" },
-                { label: "Core product built", value: "1" },
-                { label: "Domains explored", value: "3+" },
+                { label: "Years building", value: "3+" },
+                { label: "Projects shipped", value: "20+" },
+                { label: "Core product built", value: "2" },
+                { label: "Domains explored", value: "5+" },
               ].map((stat, index) => (
                 <AnimatedSection
                   key={stat.label}

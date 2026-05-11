@@ -11,6 +11,16 @@ export interface Project {
   live?: string;
 }
 
+export interface ProfessionalProject {
+  title: string;
+  company: string;
+  role: string;
+  description: string;
+  technologies: string[];
+  features?: string[];
+  link?: string;
+}
+
 export interface Experience {
   role: string;
   company: string;
@@ -56,7 +66,7 @@ export const siteConfig = {
   bio: "Motivated and detail-oriented AI Systems Engineer and Full-Stack Developer with hands-on experience in building production-grade applications using Python, FastAPI, Node.js, Next.js, and React. Strong background in designing backend systems, integrating external services, and developing complete end-to-end products with clean, maintainable architecture.\n\nI specialise in developing API-driven platforms, automation workflows, and real-time systems, along with crafting fast, responsive, and user-focused web interfaces. My work includes building structured backend services, handling data pipelines, integrating third-party APIs such as Stripe and Google services, and creating systems that are reliable, scalable, and easy to extend.\n\nI have developed and deployed applications from concept to production, including systems with voice-based interactions, automated scheduling, and multi-tenant architectures. I focus on writing efficient code, optimising performance, and ensuring smooth communication between frontend and backend systems. Passionate about solving practical problems, I continuously work on improving system design, scalability, and modern development practices.",
   heroTagline: "I Develop Digital Products That Drive Growth & Revenue.",
   aboutDescription:
-    "I'm Ahmed Younas, an AI Systems Engineer and Full-Stack Developer based in Lahore, Pakistan. I build scalable backend systems, AI-driven applications, and modern web platforms that solve real business problems and operate reliably in production.\n\nMy journey started with frontend and mobile development at GrootCore Systems, where I worked on responsive web applications and cross-platform mobile interfaces. Over time, I transitioned deeper into backend engineering and system design, focusing on building API-driven platforms, automation systems, and real-time applications.\n\nCurrently, I work as a Founding Software Engineer at Supportiyo, where I design and develop backend systems powering voice-based interactions, automation workflows, and multi-tenant platforms. My work involves integrating external services, handling real-time communication, and deploying scalable infrastructure that supports production workloads.\n\nAlongside web systems, I’ve also worked on robotics and computer vision projects, combining hardware, software, and intelligent control systems into unified platforms. This experience has shaped how I approach system design, thinking beyond just code and focusing on complete, functional systems.\n\nI'm particularly interested in building efficient software that reduces manual effort, improves workflows, and delivers measurable impact. Whether it's an automated booking system, a content generation pipeline, or a real-time service platform, I focus on building solutions that are practical, scalable, and reliable.",
+    "I'm Ahmed Younas, an AI Systems Engineer and Full-Stack Developer based in Lahore, Pakistan. I build scalable backend systems, AI-driven applications, and modern web platforms that solve real business problems and operate reliably in production.\n\nMy journey started with frontend and mobile development at GrootCore Systems, where I worked on responsive web applications and cross-platform mobile interfaces. Over time, I transitioned deeper into backend engineering and system design, focusing on building API-driven platforms, automation systems, and real-time applications.\n\nCurrently, I work as a Founding Software Engineer at Supportiyo, where I design and develop backend systems powering voice-based interactions, automation workflows, and multi-tenant platforms. My work involves integrating external services, handling real-time communication, and deploying scalable infrastructure that supports production workloads.\n\nAlongside web systems, I've also worked on robotics and computer vision projects, combining hardware, software, and intelligent control systems into unified platforms. This experience has shaped how I approach system design, thinking beyond just code and focusing on complete, functional systems.\n\nI'm particularly interested in building efficient software that reduces manual effort, improves workflows, and delivers measurable impact. Whether it's an automated booking system, a content generation pipeline, or a real-time service platform, I focus on building solutions that are practical, scalable, and reliable.",
   heroDescription:
     "A passionate developer and problem solver with a strong focus on AI, Robotics, Automations, DevOps, and full-stack development.",
 };
@@ -255,6 +265,208 @@ export const projects: Project[] = [
   },
 ];
 
+export const professionalProjects: ProfessionalProject[] = [
+  {
+    title: "LGU WordPress Website & Custom AI Chatbot Plugin",
+    company: "LGU",
+    role: "Software Engineer & System Engineer",
+    technologies: ["WordPress", "PHP", "Groq LLM"],
+    description:
+      "Maintained the LGU WordPress website and developed a custom AI chatbot plugin that collects user details before generating responses.",
+    features: [
+      "Groq LLM integration for intelligent responses",
+      "Lead generation and user detail collection",
+      "Analytics storage for user information",
+      "Custom WordPress plugin development",
+    ],
+    link: "https://lgu.edu.pk/",
+  },
+  {
+    title: "Deeptrace Frontend",
+    company: "Deeptrace",
+    role: "Frontend Engineer",
+    technologies: ["Next.js", "TypeScript"],
+    description:
+      "Developed and maintained the frontend application for Deeptrace using Next.js and TypeScript with a scalable and responsive architecture.",
+    features: [
+      "Scalable frontend architecture",
+      "Responsive design implementation",
+      "TypeScript for type safety and maintainability",
+      "Next.js optimization",
+    ],
+    link: "https://deepsearch-flame.vercel.app/",
+  },
+  {
+    title: "Supportiyo Website",
+    company: "Supportiyo",
+    role: "Lead Frontend Engineer",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    description:
+      "Built the official Supportiyo website with a modern responsive UI and optimized frontend architecture.",
+    features: [
+      "Modern, premium UI design",
+      "Optimized frontend performance",
+      "Responsive layout for all devices",
+      "Clean and maintainable code structure",
+    ],
+    link: "https://supportiyo.ai",
+  },
+  {
+    title: "Supportiyo Blog Generation System",
+    company: "Supportiyo",
+    role: "Lead Full Stack Engineer",
+    technologies: [
+      "Python",
+      "FastAPI",
+      "Supabase",
+      "Groq LLM",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Fly.io",
+    ],
+    description: "Developed a full-stack AI-powered blog generation platform.",
+    features: [
+      "FastAPI backend with Supabase authentication",
+      "Groq LLM integration with custom-trained datasets",
+      "Automated blog generation workflow",
+      "Deployment on Fly.io",
+      "Next.js & Tailwind CSS frontend",
+    ],
+  },
+  {
+    title: "Supportiyo Dashboard",
+    company: "Supportiyo",
+    role: "Lead Full Stack Engineer",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    description:
+      "Developed a comprehensive dashboard system for managing businesses, agents, calls, appointments, orders, API keys, and integrations.",
+    features: [
+      "Full CRUD functionality for business resources",
+      "Simpro and Zapier integrations",
+      "Real-time data visualization",
+      "API key management system",
+    ],
+    link: "https://dashboard.supportiyo.ai/",
+  },
+  {
+    title: "Supportiyo Mobile App (Android & iOS)",
+    company: "Supportiyo",
+    role: "Lead Mobile App Engineer",
+    technologies: ["Flutter", "Dart"],
+    description:
+      "Developed a cross-platform mobile application currently used internally by clients.",
+    features: [
+      "Access to business details and operational data",
+      "Call recordings and transcripts interface",
+      "Appointments and orders management",
+      "Billing information tracking",
+    ],
+  },
+  {
+    title: "Shared Backend System for Dashboard & Mobile App",
+    company: "Supportiyo",
+    role: "Backend Engineer & System Architect",
+    technologies: [
+      "Python",
+      "FastAPI",
+      "Redis",
+      "PostgreSQL",
+      "Docker",
+      "Fly.io",
+      "JWT",
+      "Google OAuth",
+      "Stripe",
+    ],
+    description:
+      "Developed and maintained the centralized backend system powering both the dashboard and mobile applications.",
+    features: [
+      "Authentication systems with JWT and Google OAuth",
+      "Payment integrations with Stripe",
+      "Redis caching for performance",
+      "Third-party integrations (Simpro, Zapier)",
+      "Dockerized deployment on Fly.io",
+    ],
+  },
+  {
+    title: "Supportiyo Voice System Architecture",
+    company: "Supportiyo",
+    role: "Voice Systems Engineer",
+    technologies: ["Voice AI", "System Design"],
+    description:
+      "Maintained and improved the voice system architecture for Supportiyo.",
+    features: [
+      "Ensured system reliability and scalability",
+      "Optimized communication workflows",
+      "Continuous system performance improvement",
+    ],
+  },
+  {
+    title: "Credits Monitoring & Email Automation Platform",
+    company: "Supportiyo",
+    role: "Automation Engineer",
+    technologies: ["Python", "API Integrations", "Fly.io"],
+    description:
+      "Built an automated credit monitoring and email notification platform.",
+    features: [
+      "Usage tracking through integrated APIs",
+      "Automated email updates and notifications",
+      "Operational monitoring for platform visibility",
+      "Reliable background processing",
+    ],
+  },
+  {
+    title: "Fly Simple",
+    company: "Fly Simple",
+    role: "Full Stack Engineer",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Python",
+      "Flight APIs",
+      "Fly.io",
+    ],
+    description:
+      "Developed the frontend platform for Fly Simple with integrations to multiple flight data APIs.",
+    features: [
+      "Integration with multiple flight data APIs",
+      "Full-stack development (Next.js & Python)",
+      "Automated flight data processing",
+      "Deployment on Fly.io",
+    ],
+    link: "https://flysimple.vercel.app/",
+  },
+  {
+    title: "Supportiyo Zapier Custom App & Workflow Integrations",
+    company: "Supportiyo",
+    role: "Integration Engineer & Backend Developer",
+    technologies: ["Node.js", "Zapier Platform", "REST APIs"],
+    description:
+      "Developed a custom Zapier application for Supportiyo that allows users to securely fetch appointment data using API keys and integrate it with their own CRM systems, databases, Google Sheets, and third-party platforms. Built scalable workflow automations and API integrations to simplify data synchronization across external services.",
+    features: [
+      "Secure API key authentication for data access",
+      "Bidirectional sync with CRM, databases, and Google Sheets",
+      "Customizable Zapier triggers and actions",
+      "Scalable workflow automation for enterprise use",
+    ],
+  },
+  {
+    title: "PIXOU - AI Image Generation Platform",
+    company: "Grootcore Systems",
+    role: "Lead Frontend & Mobile Engineer",
+    technologies: ["Flutter", "Dart", "Next.js", "TypeScript", "Tailwind CSS"],
+    description:
+      "Developed both the mobile application and frontend web platform for PIXOU's AI-powered text-to-image generation platform. Built responsive user interfaces, optimized user experience across devices, and implemented a scalable frontend architecture for image generation workflows and platform interactions.",
+    features: [
+      "Cross-platform Flutter mobile app",
+      "Next.js web interface with Tailwind CSS design",
+      "Real-time image generation UI",
+      "Scalable architecture for handling AI model requests",
+    ],
+  },
+];
+
 export const featuredProjects = projects.slice(0, 3);
 
 // ─── Skills ───────────────────────────────────────────────────────────────────
@@ -352,6 +564,7 @@ export const skills: Skill[] = [
     items: [
       "Python",
       "C / C++ / C#",
+      "PHP",
       "Git / GitHub",
       "CI/CD",
       "Bash",
