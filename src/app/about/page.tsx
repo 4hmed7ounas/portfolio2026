@@ -77,9 +77,31 @@ export default function AboutPage() {
             <div className="mt-5 space-y-4 text-foreground-muted leading-relaxed">
               {siteConfig.aboutDescription
                 .split("\n")
-                .map((line, index) => (
-                  <p key={index}>{line}</p>
-                ))}
+                .map((line, index) => {
+                  // Parse markdown-style links [text](url) into clickable anchors
+                  const parts = line.split(/(\[[^\]]+\]\([^)]+\))/g);
+                  return (
+                    <p key={index}>
+                      {parts.map((part, i) => {
+                        const linkMatch = part.match(/\[([^\]]+)\]\(([^)]+)\)/);
+                        if (linkMatch) {
+                          return (
+                            <a
+                              key={i}
+                              href={linkMatch[2]}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-accent font-semibold hover:underline transition-colors"
+                            >
+                              {linkMatch[1]}
+                            </a>
+                          );
+                        }
+                        return <span key={i}>{part}</span>;
+                      })}
+                    </p>
+                  );
+                })}
             </div>
           </AnimatedSection>
         </div>

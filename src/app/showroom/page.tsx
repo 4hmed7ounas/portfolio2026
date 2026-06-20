@@ -196,8 +196,8 @@ export default function ShowroomPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="bg-background-alt text-accent px-5 py-3.5 font-bold tracking-wide uppercase leading-[0.9] text-3xl sm:text-5xl md:text-7xl select-none"
-              style={{ fontFamily: "var(--font-bebas-neue), sans-serif" }}
+              className="bg-background-alt text-accent px-5 font-serif py-3.5 font-bold tracking-wide uppercase leading-[0.9] text-3xl sm:text-5xl md:text-6xl select-none"
+              // style={{ fontFamily: "var(--font-bebas-neue), sans-serif" }}
             >
               CODE EVERY.
               <br />
@@ -209,7 +209,7 @@ export default function ShowroomPage() {
               transition={{ delay: 0.4, duration: 0.6 }}
             >
               <Link
-                href="#catalog"
+                href="/projects"
                 className="text-accent font-sans text-xs sm:text-sm font-semibold uppercase tracking-widest hover:text-accent/60 transition-colors flex items-center gap-2 group mt-1"
               >
                 View Focus Areas
@@ -354,8 +354,8 @@ export default function ShowroomPage() {
               className="max-w-md"
             >
               <h2 
-                className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-normal leading-none text-black mb-6"
-                style={{ fontFamily: "var(--font-bebas-neue), sans-serif" }}
+                className="text-4xl sm:text-5xl font-serif font-bold tracking-normal leading-none text-black mb-6"
+                // style={{ fontFamily: "var(--font-bebas-neue), sans-serif" }}
               >
                 A PHILOSOPHY OF ROBUST, SCALABLE CODE
               </h2>
@@ -385,8 +385,8 @@ export default function ShowroomPage() {
               className="w-full max-w-xl select-none"
             >
               <h1 
-                className="text-[6rem] sm:text-[9rem] font-bold text-black tracking-tighter flex flex-col font-stretch-condensed"
-                style={{ fontFamily: "var(--font-bebas-neue), sans-serif" }}
+                className="text-[4.5rem] sm:text-[9rem] font-bold font-serif text-black tracking-tighter flex flex-col font-stretch-condensed"
+                // style={{ fontFamily: "var(--font-bebas-neue), sans-serif" }}
               >
                 <span>FULL-STACK</span>
                 <span>AI</span>
