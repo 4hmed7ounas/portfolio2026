@@ -1,4 +1,4 @@
-import { Code2, Palette, Zap, Layers, ArrowRight, Briefcase, GraduationCap, Mail } from "lucide-react";
+import { Code2, Palette, Zap, Layers, ArrowRight, Briefcase, GraduationCap, Mail, Sparkles } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 import ProjectCard from "@/components/ProjectCard";
@@ -52,14 +52,34 @@ export default function Home() {
               <p className="text-lg md:text-xl text-foreground-muted leading-relaxed max-w-2xl">
                 {siteConfig.heroDescription}
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Button href="/projects" variant="primary">
+              <div className="flex flex-wrap items-center gap-4">
+                <div className="relative inline-block">
+                  <Button 
+                    href="/showroom" 
+                    variant="primary" 
+                    className="relative overflow-hidden bg-black text-white hover:bg-neutral-900 border border-black shadow-md flex items-center gap-2 group"
+                  >
+                    <span className="relative z-10 flex items-center gap-2">
+                      <Sparkles className="w-4 h-4 text-white animate-pulse" />
+                      Explore 3D Showroom
+                    </span>
+                    <span className="absolute inset-0 bg-linear-to-r from-yellow-500/10 via-transparent to-yellow-500/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-out" />
+                  </Button>
+                  
+                  {/* Glowing Pulse Accent - Placed outside overflow-hidden */}
+                  <span className="absolute -top-2 -right-2 bg-white text-black text-[9px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider animate-bounce shadow-md z-10 pointer-events-none">
+                    New
+                  </span>
+                </div>
+
+                <Button href="/projects" variant="outline">
                   View Projects
                   <ArrowRight size={16} />
                 </Button>
-                <Button href="/contact" variant="outline">
+{/*                 
+                <Button href="/contact" variant="ghost">
                   Let&apos;s Talk
-                </Button>
+                </Button> */}
               </div>
             </div>
           </AnimatedSection>
