@@ -142,12 +142,12 @@ export const highlights = [
 
 export const projects: Project[] = [
   {
-    title: "AI Blogs Generation Platform",
+    title: "Fly Simple",
     description:
-      "Built an AI-powered blogs generation agents platform enabling businesses to automate blog creation using LLM-based intelligent workflows and web scraping.",
-    image: assets.blogGeneration,
-    tags: ["Python", "FastAPI", "Next.js", "LLM", "Web Scraping"],
-    live: "https://blogs-generation-system-frontend.vercel.app/",
+      "A full-stack travel platform for discovering flights, hotels, and car rentals, powered by automated travel data collection through Apify Actors and a Sanity-powered content management system.",
+    image: assets.flySimple,
+    tags: ["Next.js", "TypeScript", "Sanity", "Apify", "PostHog", "Vercel"],
+    live: "https://www.flysimple.net",
   },
 
   {
@@ -165,6 +165,15 @@ export const projects: Project[] = [
     image: assets.luxeKitchenCabinets,
     tags: ["WordPress", "Web Development", "PHP", "Responsive Design"],
     live: "https://luxekitchencabinets.vercel.app/",
+  },
+
+  {
+    title: "AI Blogs Generation Platform",
+    description:
+      "Built an AI-powered blogs generation agents platform enabling businesses to automate blog creation using LLM-based intelligent workflows and web scraping.",
+    image: assets.blogGeneration,
+    tags: ["Python", "FastAPI", "Next.js", "LLM", "Web Scraping"],
+    live: "https://blogs-generation-system-frontend.vercel.app/",
   },
   {
     title: "WRAITH - Mobile App",
@@ -422,21 +431,25 @@ export const professionalProjects: ProfessionalProject[] = [
     role: "Full Stack Engineer",
     technologies: [
       "Next.js",
+      "React",
       "TypeScript",
       "Tailwind CSS",
-      "Python",
-      "Flight APIs",
-      "Fly.io",
+      "Sanity",
+      "Apify",
+      "PostHog",
+      "Vercel",
     ],
     description:
-      "Developed the frontend platform for Fly Simple with integrations to multiple flight data APIs.",
+      "Built a full-stack travel platform for discovering flights, hotels, and car rentals, with automated travel data collection through Apify Actors and a Sanity-powered content management system.",
     features: [
-      "Integration with multiple flight data APIs",
-      "Full-stack development (Next.js & Python)",
-      "Automated flight data processing",
-      "Deployment on Fly.io",
+      "Flight, hotel, and car rental search powered by Apify Actors",
+      "Automated travel data collection and processing",
+      "Sanity CMS for managing travel content",
+      "Dynamic affiliate redirect flows for flight and hotel bookings",
+      "Product analytics and event tracking with PostHog",
+      "Production deployment on Vercel with a custom domain",
     ],
-    link: "https://flysimple.vercel.app/",
+    link: "https://www.flysimple.net",
   },
   {
     title: "Supportiyo Zapier Custom App & Workflow Integrations",
@@ -655,9 +668,17 @@ export const experience: Experience[] = [
 
 export const education = [
   {
+    degree: "Master of Science in Artificial Intelligence",
+    institution:
+      "FAST - National University of Computer and Emerging Sciences, Islamabad",
+    period: "Aug 2026 — Present",
+    details: "Ongoing. Coursework: Advanced AI, Mathematical Fundation of AI",
+  },
+  {
     degree: "Bachelor's in Computer Science (Robotics & Automations)",
-    institution: "FAST - National University of Computer and Emerging Sciences",
-    period: "Sept 2021 — Jan 2026",
+    institution:
+      "FAST - National University of Computer and Emerging Sciences, Lahore",
+    period: "Aug 2021 — Dec 2025",
     details:
       "CGPA: 3.11 / 4.0. Coursework: Data Structures, AI, ML, MLOps, GenAI, IOT, Robotics.",
   },
